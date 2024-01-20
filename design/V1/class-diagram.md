@@ -6,6 +6,7 @@ classDiagram
         -MotorController leadMotor
         -MotorController followerMotor
         -Encoder encoder
+        -LimitSwitch switch
         -PIDController pid
         -double targetAngle
 
@@ -13,6 +14,7 @@ classDiagram
         +getTarget() double
         +getIsOnTarget() boolean
         +setTarget(double angle) void
+        +isAtHomePosition() boolean
     }
 
     class Shooter {
@@ -33,6 +35,12 @@ classDiagram
         -MotorController motor
 
         +setSpeed(double speed) void
+    }
+
+    class LED {
+        -MotorController blinkin
+
+        +setPattern(Pattern p)
     }
 
 ```
