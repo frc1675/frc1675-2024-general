@@ -2,7 +2,7 @@
 
 classDiagram
 
-    class Shoulder {
+    class Arm {
         -MotorController leadMotor
         -MotorController followerMotor
         -Encoder encoder
@@ -15,7 +15,7 @@ classDiagram
         +setTarget(double angle) void
     }
 
-    class Hand {
+    class Shooter {
         -MotorController feedMotor
         -MotorController shootMotor
         -LaserCAN noteSensor
@@ -30,10 +30,8 @@ classDiagram
     }
 
     class Undertaker {
-        -LaserCAN noteSensor
         -MotorController motor
 
-        +isNoteInIntake() boolean
         +setSpeed(double speed) void
     }
 
