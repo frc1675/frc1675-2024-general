@@ -12,7 +12,7 @@ classDiagram
         +getAngle() double
         +getTarget() double
         +getIsOnTarget() boolean
-        +setTarget(double target) void
+        +setTarget(double angle) void
     }
 
     class Hand {
