@@ -2,23 +2,25 @@
 
 classDiagram
 
-    class Shoulder {
+    class Arm {
         -MotorController leadMotor
         -MotorController followerMotor
         -Encoder encoder
+        -DigitalInput homeSwitch
         -PIDController pid
         -double targetAngle
 
         +getAngle() double
         +getTarget() double
-        +getIsOnTarget() boolean
+        +isOnTarget() boolean
         +setTarget(double angle) void
+        +isAtHomePosition() boolean
     }
 
-    class Hand {
+    class Shooter {
         -MotorController feedMotor
         -MotorController shootMotor
-        -LaserCAN noteSensor
+        -Sensor noteSensor
         -double targetSpeed
 
         +isNoteInFeeder() boolean
@@ -30,11 +32,15 @@ classDiagram
     }
 
     class Undertaker {
-        -LaserCAN noteSensor
         -MotorController motor
 
-        +isNoteInIntake() boolean
         +setSpeed(double speed) void
+    }
+
+    class LED {
+        -MotorController blinkin
+
+        +setPattern(Pattern p)
     }
 
 ```
