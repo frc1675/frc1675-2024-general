@@ -6,13 +6,13 @@ classDiagram
         -MotorController leadMotor
         -MotorController followerMotor
         -Encoder encoder
-        -LimitSwitch switch
+        -DigitalInput homeSwitch
         -PIDController pid
         -double targetAngle
 
         +getAngle() double
         +getTarget() double
-        +getIsOnTarget() boolean
+        +isOnTarget() boolean
         +setTarget(double angle) void
         +isAtHomePosition() boolean
     }
@@ -20,7 +20,7 @@ classDiagram
     class Shooter {
         -MotorController feedMotor
         -MotorController shootMotor
-        -LaserCAN noteSensor
+        -Sensor noteSensor
         -double targetSpeed
 
         +isNoteInFeeder() boolean
