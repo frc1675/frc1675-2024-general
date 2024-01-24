@@ -18,4 +18,4 @@ This document outlines what a correctly functioning swerve drive behaves like.
 ## Autonomous Movement
 - Drive chassis can autonomously translate in a straight line.
 - Drive chassis can autonomously translate through a Bezier curve (use PathPlanner).
-- Drive chassis can autonomsly translate in a rectangle shape. 
+- Drive chassis can autonomously translate in a rectangle shape to its starting position. 
